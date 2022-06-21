@@ -1,5 +1,7 @@
 package com.zou.service.impl;
 
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 /**
@@ -7,12 +9,6 @@ import org.springframework.stereotype.Service;
  * @date: 2022/6/21 19:14
  */
 @Service
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class ServiceImpl {
-    private String serviceName;
-    public ServiceImpl(String serviceName) {
-        this.serviceName = serviceName;
-    }
-    public ServiceImpl(String serviceName, String otherStringParameter) {
-        this.serviceName = serviceName;
-    }
 }
